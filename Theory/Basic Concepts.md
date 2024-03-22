@@ -39,7 +39,7 @@ The final step involves analyzing the results, visualizing the sentiment distrib
 - **Language and Cultural Differences:** Sentiment analysis models need to account for linguistic and cultural nuances when applied globally.
 
 
-# Concepts in Sentiment Analysis
+# Sentiment Analysis Tasks
 
 Sentiment Analysis encompasses several sub-tasks, each addressing different facets of understanding opinions and emotions in text. Below, we explore four key concepts: Polarity Detection, Emotion Recognition, Aspect Extraction, and Subjectivity Detection.
 
