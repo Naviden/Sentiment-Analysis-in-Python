@@ -1,4 +1,4 @@
-# Python Sentiment Analysis Learning Repository
+# Learning Sentiment Analysis in Python
 
 ## Overview
 
