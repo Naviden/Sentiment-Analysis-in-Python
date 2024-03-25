@@ -116,3 +116,5 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+Data/A.txt
+Data/K.txt
