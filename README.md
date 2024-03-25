@@ -22,11 +22,7 @@ To get started with this repository:
    ```
    git clone https://github.com/Naviden/Sentiment-Analysis-in-Python.git
    ```
-2. Install required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-3. Explore the tutorials and code examples available in the repository to begin your learning journey.
+2. Explore the tutorials and code examples available in the repository to begin your learning journey.
 
 ## Prerequisites
 
