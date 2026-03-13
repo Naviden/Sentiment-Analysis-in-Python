@@ -34,4 +34,45 @@ Hybrid approaches combine elements of knowledge-based and machine learning metho
 - Integrating lexicon-based scoring with machine learning models to improve the detection of sentiment intensity.
 - Using rule-based techniques to handle negations and intensifiers in combination with neural network models for overall sentiment classification.
 
+### 5. **Sentence Embedding Approach (e.g., Sentence-BERT)**
+
+Sentence embedding models encode entire sentences into dense vector representations that capture semantic meaning. Unlike word-level embeddings, these models produce a single fixed-length vector for a complete sentence, enabling effective comparison and classification using simple downstream classifiers.
+
+**How it works:**
+- A pre-trained transformer model (e.g., BERT) is fine-tuned using a Siamese/triplet network architecture to produce semantically meaningful sentence embeddings.
+- These embeddings can be used as features for a classifier (e.g., logistic regression) or for zero-shot classification via cosine similarity to reference phrases.
+
+**Examples:**
+- **Sentence-BERT (SBERT):** Produces embeddings optimized for semantic similarity tasks (Reimers & Gurevych, 2019).
+- **SetFit:** A few-shot fine-tuning framework built on SBERT that achieves strong results with very few labeled examples (Tunstall et al., 2022).
+
+**Advantages:** Fast inference, works well with limited labeled data, produces reusable embeddings.
+
+### 6. **Large Language Model (LLM) Approach**
+
+Large Language Models can perform sentiment analysis through prompting alone, without any task-specific training. This represents a paradigm shift from traditional supervised learning to in-context learning.
+
+**Prompting strategies:**
+- **Zero-shot:** Directly asking the model to classify sentiment with no examples.
+- **Few-shot:** Providing a handful of labeled examples in the prompt to guide the model.
+- **Chain-of-thought:** Asking the model to reason step-by-step before classifying, which can improve accuracy on ambiguous texts.
+
+**Examples:**
+- **GPT-4, Claude, Llama, Gemma:** Modern LLMs accessible via APIs (e.g., OpenRouter) that can perform sentiment analysis out of the box.
+- **Fine-tuned LLMs:** Models fine-tuned specifically for sentiment tasks using instruction tuning or RLHF.
+
+**Advantages:** No training data required, handles sarcasm and nuance well, provides explainable predictions.
+**Limitations:** Higher latency, API costs, potential reproducibility concerns, privacy considerations when using external APIs.
+
+### Choosing an Approach
+
 Each approach has its own set of challenges and benefits, and the choice of method often depends on the specific requirements of the sentiment analysis task, including the nature of the text data, the desired granularity of sentiment detection, and the resources available for model training and deployment.
+
+| Approach | Training Data | Speed | Accuracy | Explainability |
+|----------|--------------|-------|----------|----------------|
+| Knowledge-Based | None | Very fast | Low-Medium | High (lexicon) |
+| Machine Learning | Large labeled set | Fast (after training) | Medium-High | Medium |
+| Deep Learning | Large labeled set | Medium | High | Low |
+| Sentence Embeddings | Small-Medium labeled set | Fast | High | Medium |
+| LLM Prompting | None (or few examples) | Slow (API) | Very High | High (with CoT) |
+| Hybrid | Varies | Varies | High | Varies |
