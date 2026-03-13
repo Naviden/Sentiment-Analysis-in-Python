@@ -7,20 +7,19 @@ A comprehensive educational repository covering sentiment analysis techniques �
 ```
 .
 ├── Theory/
-│   ├── Basic Concepts.md        # Fundamentals of sentiment analysis
-│   └── Approaches.md            # Overview of all approaches with comparison table
+│   ├── Basic Concepts.md                          # Fundamentals of sentiment analysis
+│   └── Approaches.md                              # Overview of all approaches with comparison table
 ├── Tools/
-│   ├── Tools.ipynb              # VADER, Naive Bayes, and LSTM on IMDB reviews
-│   ├── VADER in Detail.ipynb    # VADER lexicon-based analysis walkthrough
-│   ├── Textblob in Detail.ipynb # TextBlob polarity and subjectivity analysis
-│   ├── Sentence-BERT Sentiment Analysis.ipynb  # SBERT embeddings + classification
-│   └── LLM Sentiment Analysis (OpenRouter).ipynb  # Zero/few-shot with LLMs
-├── Notebooks/
-│   └── Knowledge-Based Approach.ipynb  # Simple lexicon-based sentiment scoring
-├── Case Study.ipynb             # Sentiment arc analysis of literary texts
+│   ├── Knowledge-Based Approach.ipynb             # Simple custom-lexicon sentiment scoring
+│   ├── VADER in Detail.ipynb                      # VADER lexicon-based analysis walkthrough
+│   ├── Textblob in Detail.ipynb                   # TextBlob polarity and subjectivity analysis
+│   ├── Tools.ipynb                                # VADER, Naive Bayes, and LSTM on IMDB reviews
+│   ├── Sentence-BERT Sentiment Analysis.ipynb     # SBERT embeddings + classification
+│   ├── LLM Sentiment Analysis (OpenRouter).ipynb  # Zero/few-shot with LLMs via API
+│   └── Case Study.ipynb                           # Multi-method comparison on literary texts
 ├── Data/
 │   ├── A.txt                    # Alice's Adventures in Wonderland (full text)
-│   └── K.txt                    # Literary text for comparative analysis
+│   └── K.txt                    # The Metamorphosis by Franz Kafka (full text)
 ├── requirements.txt
 └── README.md
 ```
@@ -29,7 +28,7 @@ A comprehensive educational repository covering sentiment analysis techniques �
 
 | Method | Notebook | Approach Type |
 |--------|----------|---------------|
-| Custom Lexicon | `Notebooks/Knowledge-Based Approach.ipynb` | Knowledge-based |
+| Custom Lexicon | `Tools/Knowledge-Based Approach.ipynb` | Knowledge-based |
 | VADER | `Tools/VADER in Detail.ipynb` | Knowledge-based (rule-enhanced) |
 | TextBlob | `Tools/Textblob in Detail.ipynb` | Knowledge-based |
 | Naive Bayes + BoW | `Tools/Tools.ipynb` | Machine learning |
@@ -60,7 +59,7 @@ export OPENROUTER_API_KEY="your-key-here"
 
 ### Dataset
 
-The notebooks in `Tools/` use the [IMDB Reviews dataset](https://ai.stanford.edu/~amaas/data/sentiment/) (Maas et al., 2011), loaded automatically via `tensorflow_datasets`. The `Case Study.ipynb` notebook uses literary texts included in `Data/`.
+The notebooks in `Tools/` use the [IMDB Reviews dataset](https://ai.stanford.edu/~amaas/data/sentiment/) (Maas et al., 2011), loaded automatically via `tensorflow_datasets`. The Case Study notebook uses two literary texts included in `Data/`: *Alice's Adventures in Wonderland* and *The Metamorphosis*.
 
 ## Suggested Learning Path
 
@@ -69,7 +68,7 @@ The notebooks in `Tools/` use the [IMDB Reviews dataset](https://ai.stanford.edu
 3. **Machine learning** — Follow the Naive Bayes and LSTM sections in `Tools.ipynb`
 4. **Transformer embeddings** — Explore the Sentence-BERT notebook
 5. **LLM prompting** — Experiment with zero-shot, few-shot, and chain-of-thought in the OpenRouter notebook
-6. **Applied analysis** — Run the Case Study to see sentiment analysis on real literary texts
+6. **Applied analysis** — Run the Case Study to compare VADER, TextBlob, and SBERT on literary texts
 
 ## References
 
