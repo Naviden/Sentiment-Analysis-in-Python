@@ -10,13 +10,13 @@ A comprehensive educational repository covering sentiment analysis techniques �
 │   ├── Basic Concepts.md                          # Fundamentals of sentiment analysis
 │   └── Approaches.md                              # Overview of all approaches with comparison table
 ├── Tools/
-│   ├── Knowledge-Based Approach.ipynb             # Simple custom-lexicon sentiment scoring
-│   ├── VADER in Detail.ipynb                      # VADER lexicon-based analysis walkthrough
-│   ├── Textblob in Detail.ipynb                   # TextBlob polarity and subjectivity analysis
-│   ├── VADER, Naive Bayes, and LSTM.ipynb         # Side-by-side comparison on IMDB reviews
-│   ├── Sentence-BERT Sentiment Analysis.ipynb     # SBERT embeddings + classification
-│   ├── LLM Sentiment Analysis (OpenRouter).ipynb  # Zero/few-shot with LLMs via API
-│   └── Case Study.ipynb                           # Multi-method comparison on literary texts
+│   ├── 01 - Knowledge-Based Approach.ipynb             # Simple custom-lexicon sentiment scoring
+│   ├── 02 - VADER in Detail.ipynb                      # VADER lexicon-based analysis walkthrough
+│   ├── 03 - TextBlob in Detail.ipynb                   # TextBlob polarity and subjectivity analysis
+│   ├── 04 - VADER, Naive Bayes, and LSTM.ipynb         # Benchmark comparison on IMDB reviews
+│   ├── 05 - Sentence-BERT.ipynb                        # SBERT embeddings + classification
+│   ├── 06 - LLM Sentiment Analysis (OpenRouter).ipynb  # Zero/few-shot with LLMs via API
+│   └── 07 - Case Study.ipynb                           # Applied analysis of literary texts (no labels)
 ├── Data/
 │   ├── A.txt                    # Alice's Adventures in Wonderland (full text)
 │   └── K.txt                    # The Metamorphosis by Franz Kafka (full text)
@@ -28,13 +28,14 @@ A comprehensive educational repository covering sentiment analysis techniques �
 
 | Method | Notebook | Approach Type |
 |--------|----------|---------------|
-| Custom Lexicon | `Tools/Knowledge-Based Approach.ipynb` | Knowledge-based |
-| VADER | `Tools/VADER in Detail.ipynb` | Knowledge-based (rule-enhanced) |
-| TextBlob | `Tools/Textblob in Detail.ipynb` | Knowledge-based |
-| Naive Bayes + BoW | `Tools/VADER, Naive Bayes, and LSTM.ipynb` | Machine learning |
-| LSTM Neural Network | `Tools/VADER, Naive Bayes, and LSTM.ipynb` | Deep learning |
-| Sentence-BERT | `Tools/Sentence-BERT Sentiment Analysis.ipynb` | Transfer learning |
-| LLM Prompting (OpenRouter) | `Tools/LLM Sentiment Analysis (OpenRouter).ipynb` | Large language models |
+| Custom Lexicon | `01 - Knowledge-Based Approach.ipynb` | Knowledge-based |
+| VADER | `02 - VADER in Detail.ipynb` | Knowledge-based (rule-enhanced) |
+| TextBlob | `03 - TextBlob in Detail.ipynb` | Knowledge-based |
+| Naive Bayes + BoW | `04 - VADER, Naive Bayes, and LSTM.ipynb` | Machine learning |
+| LSTM Neural Network | `04 - VADER, Naive Bayes, and LSTM.ipynb` | Deep learning |
+| Sentence-BERT | `05 - Sentence-BERT.ipynb` | Transfer learning |
+| LLM Prompting (OpenRouter) | `06 - LLM Sentiment Analysis (OpenRouter).ipynb` | Large language models |
+| Applied Case Study | `07 - Case Study.ipynb` | Applied / no ground truth |
 
 ## Getting Started
 
@@ -63,12 +64,14 @@ The notebooks in `Tools/` use the [IMDB Reviews dataset](https://ai.stanford.edu
 
 ## Suggested Learning Path
 
-1. **Theory** — Read `Basic Concepts.md` and `Approaches.md` for foundational understanding
-2. **Lexicon methods** — Work through the Knowledge-Based, VADER, and TextBlob notebooks
-3. **Machine learning** — Follow the Naive Bayes and LSTM sections in `VADER, Naive Bayes, and LSTM.ipynb`
-4. **Transformer embeddings** — Explore the Sentence-BERT notebook
-5. **LLM prompting** — Experiment with zero-shot, few-shot, and chain-of-thought in the OpenRouter notebook
-6. **Applied analysis** — Run the Case Study to compare VADER, TextBlob, and SBERT on literary texts
+1. **Theory** — Read `Basic Concepts.md` and `Approaches.md`
+2. **`01`** — Build a minimal lexicon-based classifier from scratch
+3. **`02`** — Explore VADER in depth
+4. **`03`** — Explore TextBlob in depth
+5. **`04`** — Compare VADER, Naive Bayes, and LSTM on a labeled benchmark (IMDB)
+6. **`05`** — Sentence-BERT: transfer learning without fine-tuning
+7. **`06`** — LLM prompting via OpenRouter (zero-shot, few-shot, chain-of-thought)
+8. **`07`** — Case Study: apply the tools to literary texts with no ground truth
 
 ## References
 
@@ -77,6 +80,7 @@ The notebooks in `Tools/` use the [IMDB Reviews dataset](https://ai.stanford.edu
 - Reimers, N. & Gurevych, I. (2019). Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks. *EMNLP*.
 - Brown, T., et al. (2020). Language Models are Few-Shot Learners. *NeurIPS*.
 - Wei, J., et al. (2022). Chain-of-Thought Prompting Elicits Reasoning in Large Language Models. *NeurIPS*.
+- Reagan, A.J., et al. (2016). The emotional arcs of stories are dominated by six basic shapes. *EPJ Data Science*.
 
 ## License
 
