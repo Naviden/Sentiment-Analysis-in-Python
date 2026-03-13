@@ -13,7 +13,7 @@ A comprehensive educational repository covering sentiment analysis techniques �
 │   ├── Knowledge-Based Approach.ipynb             # Simple custom-lexicon sentiment scoring
 │   ├── VADER in Detail.ipynb                      # VADER lexicon-based analysis walkthrough
 │   ├── Textblob in Detail.ipynb                   # TextBlob polarity and subjectivity analysis
-│   ├── Tools.ipynb                                # VADER, Naive Bayes, and LSTM on IMDB reviews
+│   ├── VADER, Naive Bayes, and LSTM.ipynb         # Side-by-side comparison on IMDB reviews
 │   ├── Sentence-BERT Sentiment Analysis.ipynb     # SBERT embeddings + classification
 │   ├── LLM Sentiment Analysis (OpenRouter).ipynb  # Zero/few-shot with LLMs via API
 │   └── Case Study.ipynb                           # Multi-method comparison on literary texts
@@ -31,8 +31,8 @@ A comprehensive educational repository covering sentiment analysis techniques �
 | Custom Lexicon | `Tools/Knowledge-Based Approach.ipynb` | Knowledge-based |
 | VADER | `Tools/VADER in Detail.ipynb` | Knowledge-based (rule-enhanced) |
 | TextBlob | `Tools/Textblob in Detail.ipynb` | Knowledge-based |
-| Naive Bayes + BoW | `Tools/Tools.ipynb` | Machine learning |
-| LSTM Neural Network | `Tools/Tools.ipynb` | Deep learning |
+| Naive Bayes + BoW | `Tools/VADER, Naive Bayes, and LSTM.ipynb` | Machine learning |
+| LSTM Neural Network | `Tools/VADER, Naive Bayes, and LSTM.ipynb` | Deep learning |
 | Sentence-BERT | `Tools/Sentence-BERT Sentiment Analysis.ipynb` | Transfer learning |
 | LLM Prompting (OpenRouter) | `Tools/LLM Sentiment Analysis (OpenRouter).ipynb` | Large language models |
 
@@ -65,7 +65,7 @@ The notebooks in `Tools/` use the [IMDB Reviews dataset](https://ai.stanford.edu
 
 1. **Theory** — Read `Basic Concepts.md` and `Approaches.md` for foundational understanding
 2. **Lexicon methods** — Work through the Knowledge-Based, VADER, and TextBlob notebooks
-3. **Machine learning** — Follow the Naive Bayes and LSTM sections in `Tools.ipynb`
+3. **Machine learning** — Follow the Naive Bayes and LSTM sections in `VADER, Naive Bayes, and LSTM.ipynb`
 4. **Transformer embeddings** — Explore the Sentence-BERT notebook
 5. **LLM prompting** — Experiment with zero-shot, few-shot, and chain-of-thought in the OpenRouter notebook
 6. **Applied analysis** — Run the Case Study to compare VADER, TextBlob, and SBERT on literary texts
