@@ -1,36 +1,88 @@
-# Learning Sentiment Analysis in Python
+# Sentiment Analysis in Python
 
-## Overview
+A comprehensive educational repository covering sentiment analysis techniques — from lexicon-based methods to large language models. Designed for teaching and self-study, with theoretical background and executable Jupyter notebooks for each approach.
 
-This repository is designed to facilitate the learning of sentiment analysis using Python. It provides a rich blend of theoretical background and practical examples to understand how sentiment analysis works. Through this repository, learners can grasp how to process textual data, apply natural language processing (NLP) techniques, and utilize machine learning algorithms to analyze and determine the sentiment expressed in texts.
+## Repository Structure
 
-## Features
+```
+.
+├── Theory/
+│   ├── Basic Concepts.md        # Fundamentals of sentiment analysis
+│   └── Approaches.md            # Overview of all approaches with comparison table
+├── Tools/
+│   ├── Tools.ipynb              # VADER, Naive Bayes, and LSTM on IMDB reviews
+│   ├── VADER in Detail.ipynb    # VADER lexicon-based analysis walkthrough
+│   ├── Textblob in Detail.ipynb # TextBlob polarity and subjectivity analysis
+│   ├── Sentence-BERT Sentiment Analysis.ipynb  # SBERT embeddings + classification
+│   └── LLM Sentiment Analysis (OpenRouter).ipynb  # Zero/few-shot with LLMs
+├── Notebooks/
+│   └── Knowledge-Based Approach.ipynb  # Simple lexicon-based sentiment scoring
+├── Case Study.ipynb             # Sentiment arc analysis of literary texts
+├── Data/
+│   ├── A.txt                    # Alice's Adventures in Wonderland (full text)
+│   └── K.txt                    # Literary text for comparative analysis
+├── requirements.txt
+└── README.md
+```
 
-- **Theoretical Explanations:** Understand the core concepts behind sentiment analysis, including how sentiments are defined and measured.
+## Methods Covered
 
-- **Practical Coding Examples:** Dive into Python code examples that demonstrate real-world applications of sentiment analysis.
-
-- **Step-by-Step Tutorials:** Follow detailed tutorials to build your sentiment analysis projects from scratch.
-
-- **Resources and References:** Access a curated list of additional resources for deeper learning and exploration.
+| Method | Notebook | Approach Type |
+|--------|----------|---------------|
+| Custom Lexicon | `Notebooks/Knowledge-Based Approach.ipynb` | Knowledge-based |
+| VADER | `Tools/VADER in Detail.ipynb` | Knowledge-based (rule-enhanced) |
+| TextBlob | `Tools/Textblob in Detail.ipynb` | Knowledge-based |
+| Naive Bayes + BoW | `Tools/Tools.ipynb` | Machine learning |
+| LSTM Neural Network | `Tools/Tools.ipynb` | Deep learning |
+| Sentence-BERT | `Tools/Sentence-BERT Sentiment Analysis.ipynb` | Transfer learning |
+| LLM Prompting (OpenRouter) | `Tools/LLM Sentiment Analysis (OpenRouter).ipynb` | Large language models |
 
 ## Getting Started
 
-To get started with this repository:
+### Prerequisites
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/Naviden/Sentiment-Analysis-in-Python.git
-   ```
-2. Explore the tutorials and code examples available in the repository to begin your learning journey.
+- Python 3.9+
+- Basic familiarity with Python and machine learning concepts
 
-## Prerequisites
+### Installation
 
-- Basic understanding of Python programming
-- Familiarity with basic machine learning concepts is beneficial but not required
+```bash
+git clone https://github.com/Naviden/Sentiment-Analysis-in-Python.git
+cd Sentiment-Analysis-in-Python
+pip install -r requirements.txt
+```
 
-## Contents
+For the LLM notebook, you will also need an [OpenRouter](https://openrouter.ai/) API key:
 
-- `tutorials/`: Step-by-step guides to learn sentiment analysis
-- `examples/`: Practical Python code examples demonstrating sentiment analysis applications
-- `docs/`: Additional documentation and resources for deeper understanding
+```bash
+export OPENROUTER_API_KEY="your-key-here"
+```
+
+### Dataset
+
+The notebooks in `Tools/` use the [IMDB Reviews dataset](https://ai.stanford.edu/~amaas/data/sentiment/) (Maas et al., 2011), loaded automatically via `tensorflow_datasets`. The `Case Study.ipynb` notebook uses literary texts included in `Data/`.
+
+## Suggested Learning Path
+
+1. **Theory** — Read `Basic Concepts.md` and `Approaches.md` for foundational understanding
+2. **Lexicon methods** — Work through the Knowledge-Based, VADER, and TextBlob notebooks
+3. **Machine learning** — Follow the Naive Bayes and LSTM sections in `Tools.ipynb`
+4. **Transformer embeddings** — Explore the Sentence-BERT notebook
+5. **LLM prompting** — Experiment with zero-shot, few-shot, and chain-of-thought in the OpenRouter notebook
+6. **Applied analysis** — Run the Case Study to see sentiment analysis on real literary texts
+
+## References
+
+- Hutto, C.J. & Gilbert, E.E. (2014). VADER: A Parsimonious Rule-based Model for Sentiment Analysis of Social Media Text. *ICWSM*.
+- Maas, A.L., et al. (2011). Learning Word Vectors for Sentiment Analysis. *ACL*.
+- Reimers, N. & Gurevych, I. (2019). Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks. *EMNLP*.
+- Brown, T., et al. (2020). Language Models are Few-Shot Learners. *NeurIPS*.
+- Wei, J., et al. (2022). Chain-of-Thought Prompting Elicits Reasoning in Large Language Models. *NeurIPS*.
+
+## License
+
+This project is intended for educational purposes.
+
+## Contributing
+
+Contributions are welcome. Please open an issue or submit a pull request.
