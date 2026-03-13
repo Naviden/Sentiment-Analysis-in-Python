@@ -118,3 +118,14 @@ dmypy.json
 cython_debug/
 Data/A.txt
 Data/K.txt
+
+# Hugging Face / sentence-transformers local cache
+.hf_cache/
+
+# Optional common Python ignores
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.DS_Store
